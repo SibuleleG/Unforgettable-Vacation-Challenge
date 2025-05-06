@@ -26,10 +26,12 @@
     .nav-links {
       display: flex;
       align-items: center;
-      background: white;
+
+      background-color: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
       padding: 10px 10px;
       border-radius: 17px;
-      box-shadow: 10px 5px 5px rgb(174, 174, 174);
+
       margin: 30px;
       position: absolute;
       top: 0;
@@ -41,7 +43,7 @@
     }
     .nav-links li a {
       position: relative;
-      color: #333;
+      color: #ffffff;
       font-size: 20px;
       font-weight: 500;
       padding: 6px 0;
@@ -84,28 +86,38 @@
       transform: scaleX(1);
       transform-origin: left;
     }
-    #image {
-      max-width: none;
-      width: 1100px;
-      max-width: 1100px;
-      margin: 70px auto;
+    .main-image {
+      display: block;
+      margin: 0 auto;
+      max-width: 90%;
+      border-radius: 70px;
+    }
 
-      border-radius: 17px;
-
-      margin: 20px auto;
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 91px;
+      -webkit-text-stroke: 1px #fff;
+      color: transparent;
+      background-image: linear-gradient(#fff, #fff);
+      background-repeat: no-repeat;
+      -webkit-background-clip: text;
+      background-position: -750px 0;
+      animation: backcolor 5s linear infinite alternate;
+    }
+    @keyframes backcolor {
+      100% {
+        background-position: 0 0;
+      }
     }
   </style>
   <body>
     <ul class="nav-links">
       <li>
         <a class="navbar-brand" href="#">
-          <img
-            src="https://www.creativefabrica.com/wp-content/uploads/2021/03/20/Travel-logo-design-Graphics-9786083-1-1-580x435.jpg"
-            width="90"
-            height="90"
-            class="logo"
-            alt=""
-          />
+          <img src="image.png" width="150" height="90" class="logo" alt="" />
         </a>
       </li>
       <li class="center"><a href="#">Home</a></li>
@@ -113,11 +125,13 @@
       <li class="forward"><a href="#">Prices</a></li>
     </ul>
     <br />
+    <div class="main-image">
+      <img
+        src="https://businesstech.co.za/news/wp-content/uploads/2024/11/image-80.png"
+        alt=""
+      />
+    </div>
 
-    <img
-      id="image"
-      src="https://businesstech.co.za/news/wp-content/uploads/2024/11/image-80.png"
-      alt=""
-    />
+    <h1 class="container">South Africa</h1>
   </body>
 </html>
