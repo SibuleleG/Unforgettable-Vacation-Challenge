@@ -93,7 +93,7 @@ left: 50;
       height: 90px;
     }
     .hero-container {
-      position: absolute;
+      position: fixed;
       text-align: center;
       width: 57%;
       margin: 0px auto;
@@ -110,7 +110,7 @@ left: 50;
 
 
     .container {
-      position: absolute;
+      position: fixed;
       top: 35%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -137,10 +137,41 @@ left: 50;
       max-width: 1900px;
       margin: 40px auto;
       padding: 20px;
-      background: rgb(251, 237, 210);
+      background: rgb(252, 244, 228);
       border-radius: 17px;
      
-    }
+    } 
+    .grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.grid-item {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding-bottom: 15px;
+}
+
+.animated-img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.grid-item:hover .animated-img {
+  transform: scale(1.05) rotate(1deg);
+  opacity: 0.9;
+}
+
+.description {
+  margin: 10px 0 0;
+  font-size: 18px;
+  color: #333;
+}
   </style>
   <body>
     <ul class="nav-links">
@@ -163,5 +194,21 @@ left: 50;
       <h2>Is the aha Thakadu River Camp for Me?</h2>
       <p>Set along the banks of the Marico River, Thakadu River Camp provides luxurious tented accommodation and a stylish, comfortable base from which to explore the splendid game viewing that only Madikwe Game Reserve, close to the Botswana border, can provide.</p>
     </div>
-  </body>
+    <br/>
+     <div class="grid-container">
+    <div class="grid-item">
+      <img src="image1.jpg" alt="Image 1" class="animated-img">
+      <p class="description">MALARIA-FREE AREA</p>
+    </div>
+    <div class="grid-item">
+      <img src="image2.jpg" alt="Image 2" class="animated-img">
+      <p class="description">BAR & POOL AREA</p>
+    </div>
+    <div class="grid-item">
+      <img src="image3.jpg" alt="Image 3" class="animated-img">
+      <p class="description">GAME DRIVES</p>
+    </div>
+  </div>
+
+   </body>
 </html>
