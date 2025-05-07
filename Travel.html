@@ -91,7 +91,7 @@
     }
 
     .content {
-      padding: 10px;
+      padding: 30px;
     }
 
     .camp {
@@ -108,12 +108,17 @@
     }
     .grid-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
+      width: 20;
+      max-width: 400;
+      margin: 40px auto;
+      padding: 0 20px;
     }
 
     .grid-item {
       background: white;
+      max-width: 1600px;
       border-radius: 10px;
       overflow: hidden;
       text-align: center;
@@ -136,6 +141,93 @@
       margin: 10px 0 0;
       font-size: 18px;
       color: #333;
+    }
+    .footer-img {
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      width: 95%;
+      height: 150px;
+      border-radius: 20px;
+      margin: 0 auto;
+    }
+
+    .footer-img img {
+      width: 100%;
+      height: 100;
+      object-fit: cover;
+    }
+
+    .footer-img .btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      background-color: #fdb933;
+      color: #0b0904;
+      font-size: 16px;
+      padding: 12px 24px;
+      border: none;
+      cursor: pointer;
+      border-radius: 20px;
+    }
+
+    .footer-img .btn:hover {
+      background-color: #ebce95;
+    }
+
+    .foot-img {
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      width: 95%;
+      height: 150px;
+      border-radius: 20px;
+      margin: 0 auto;
+    }
+    .foot-img img {
+      width: 100%;
+      height: 100;
+      object-fit: cover;
+    }
+    .footer-btn {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      gap: 180px;
+      align-items: center;
+      background: linear-gradient(135deg, #fdb933, #fdb933);
+      color: white;
+      padding: 14px 24px;
+      text-align: center;
+      border-radius: 50px;
+      font-size: 1.3em;
+      font-weight: bold;
+      margin: 20px auto;
+      width: 700px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+      font-size: 35px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      justify-content: center;
+      align-content: center;
+    }
+    .fter {
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      font-size: 18px;
+      color: #333;
+      text-align: center;
+
+      padding: 6px 0;
+      text-decoration: none;
+      width: 60;
     }
   </style>
   <body>
@@ -174,7 +266,7 @@
         Reserve, close to the Botswana border, can provide.
       </p>
     </div>
-    <br />
+    <section class="content"></section>
     <div class="grid-container">
       <div class="grid-item">
         <img src="image1.jpg" alt="Image 1" class="animated-img" />
@@ -189,5 +281,18 @@
         <p class="description">GAME DRIVES</p>
       </div>
     </div>
+    <section class="content"></section>
+
+    <div class="footer-img">
+      <img
+        src="https://thb.travel.co.za/Assets/Images/Slider/aha%20Thakadu%20River%20Camp%20-%201920500.jpg"
+      />
+      <button class="btn">Download fact Sheet</button>
+    </div>
+    <section class="content"></section>
+    <section class="fter">
+      <footer>Code by <a href="#">Sbulele Gxidolo</a> with 💛.</footer>
+    </section>
+    <section class="content"></section>
   </body>
 </html>
